@@ -1,0 +1,147 @@
+const doo = new Audio('assets/audio/do.mp3');
+const re = new Audio('assets/audio/re.mp3');
+const mi = new Audio('assets/audio/mi.mp3');
+const fa = new Audio('assets/audio/fa.mp3');
+const sol = new Audio('assets/audio/sol.mp3');
+const la = new Audio('assets/audio/la.mp3');
+const si = new Audio('assets/audio/si.mp3');
+let isQPressed = false;
+let isWPressed = false;
+let isEPressed = false;
+let isRPressed = false;
+let isTPressed = false;
+let isYPressed = false;
+let isUPressed = false;
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'q' && !isQPressed) {
+    doo.currentTime = 0;
+    doo.play();
+    isQPressed = true;
+  }
+}); 
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'q' && isQPressed) {
+    doo.pause();
+    isQPressed = false;
+  }
+});
+
+doo.addEventListener('ended', () => {
+  isQPressed = false;
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'w' && !isWPressed) {
+    re.currentTime = 0;
+    re.play();
+    isWPressed = true;
+  }
+}); 
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'w' && isWPressed) {
+    re.pause();
+    isWPressed = false;
+  }
+});
+
+re.addEventListener('ended', () => {
+  isWPressed = false;
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'e' && !isEPressed) {
+    mi.currentTime = 0;
+    mi.play();
+    isEPressed = true;
+  }
+}); 
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'e' && isEPressed) {
+    mi.pause();
+    isEPressed = false;
+  }
+});
+
+mi.addEventListener('ended', () => {
+  isEPressed = false;
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'r' && !isRPressed) {
+    fa.currentTime = 0;
+    fa.play();
+    isRPressed = true;
+  }
+}); 
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'r' && isRPressed) {
+    fa.pause();
+    isRPressed = false;
+  }
+});
+
+fa.addEventListener('ended', () => {
+  isRPressed = false;
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 't' && !isTPressed) {
+    sol.currentTime = 0;
+    sol.play();
+    isTPressed = true;
+  }
+}); 
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 't' && isTPressed) {
+    sol.pause();
+    isTPressed = false;
+  }
+});
+
+sol.addEventListener('ended', () => {
+  isTPressed = false;
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'y' && !isYPressed) {
+    la.currentTime = 0;
+    la.play();
+    isYPressed = true;
+  }
+}); 
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'y' && isYPressed) {
+    la.pause();
+    isYPressed = false;
+  }
+});
+
+la.addEventListener('ended', () => {
+  isYPressed = false;
+});
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'u' && !isUPressed) {
+    si.currentTime = 0;
+    si.play();
+    isUPressed = true;
+  }
+}); 
+
+document.addEventListener('keyup', (event) => {
+  if (event.key === 'u' && isUPressed) {
+    si.pause();
+    isUPressed = false;
+  }
+});
+
+si.addEventListener('ended', () => {
+  isUPressed = false;
+});
